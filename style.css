@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ededed;
+}
+
+.container {    
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .canvas {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.foo {
+    height: 100%;
+    min-height: 0;
+    border: 1px solid lightcoral;
+    display: flex;
+}
+
+.boo {
+    border: 1px solid lightblue;
+    width: 100%;
+}
