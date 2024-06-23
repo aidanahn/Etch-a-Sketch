@@ -74,6 +74,7 @@ button:active {
     height: 400px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 15px rgb(208, 208, 208);
 }
 
 .row {
@@ -90,8 +91,7 @@ button:active {
 
 
 
-
-.drawn {
+.draw {
 
 }
 
