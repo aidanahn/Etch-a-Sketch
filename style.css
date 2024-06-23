@@ -2,18 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 body {
     background-color: #ededed;
 }
 
+button {
+    padding: 9px 9px;
+    width: 190px;
+    font-size: 18px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333;
+    color: #333;
+}
+
+button:hover {
+    background: #333;
+    color: white;
+    transition: all .2s;    
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+.header {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 90px;
+    color: #333;
+}
+
 .container {    
     display: flex;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 42.2%;
     transform: translate(-50%, -50%);
+    color: #333;
+}
+
+.container .settings {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    justify-content: center;    
+    gap: 20px;
+}
+
+.settings .grid-settings-container {
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.grid-settings-container input {
+    width: 100%;
+    margin-top: 8px;
 }
 
 .container .canvas {
@@ -32,4 +84,32 @@ body {
 
 .column {
     width: 100%;
+}
+
+
+
+
+
+
+.drawn {
+
+}
+
+.erase {
+    background-color: #333;
+    color: white;
+}
+
+
+
+
+
+
+
+.drawn {
+    background-color: red;
+}
+
+.erased {
+    background-color: white;
 }

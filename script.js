@@ -1,14 +1,31 @@
 const canvas = document.querySelector('.canvas');
 const gridSize = document.querySelector('input');
+const clearButton = document.querySelector('#clear-button');
 
+clearButton.addEventListener('click', function() {
+    createDivs(gridSize.value)
+})
 
-
-gridSize.addEventListener('click', function() {
+gridSize.addEventListener('input', function() {
     console.log(gridSize.value);
     createDivs(gridSize.value);
     console.log(canvas);
 })
 
+const eraseButton = document.querySelector('#erase-button');
+
+eraseButton.addEventListener('click', function() {
+    if (eraseButton.classList.contains('draw')) {
+        eraseButton.classList.remove('draw');
+        eraseButton.classList.add('erase');
+        console.log('erase true');
+    }
+    else {
+        eraseButton.classList.remove('erase');
+        eraseButton.classList.add('draw');
+        console.log('erase false');
+    }
+})
 
 function createDivs(nums) {
     while (canvas.firstChild) {
@@ -28,14 +45,21 @@ function createDivs(nums) {
         canvas.appendChild(rowDiv);
         rowDiv.classList.add('row');
     }
+
+    const inputText = document.querySelector('#grid-size');
+    inputText.textContent = `${nums} x ${nums}`;
 }
 
 function draw(columnDiv) {
-    columnDiv.style.backgroundColor = 'red';
+    if (eraseButton.classList.contains('draw')){
+        columnDiv.classList.add('drawn');
+        columnDiv.classList.remove('erased');
+    }
+    else {
+        columnDiv.classList.add('erased')
+        columnDiv.classList.remove('drawn');
+    }
 }
-
-
-
 
 
 
