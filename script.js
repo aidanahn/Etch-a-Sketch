@@ -9,6 +9,7 @@ gridSize.addEventListener('click', function() {
     console.log(canvas);
 })
 
+
 function createDivs(nums) {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
@@ -19,12 +20,21 @@ function createDivs(nums) {
         for (j = 0; j < nums; j++) {
             let columnDiv = document.createElement('div');
             rowDiv.appendChild(columnDiv);
-            columnDiv.classList.add('boo');
+            columnDiv.classList.add('column');
+            columnDiv.addEventListener('mouseover', function() {
+                draw(columnDiv);
+            })
         }
         canvas.appendChild(rowDiv);
-        rowDiv.classList.add('foo');
+        rowDiv.classList.add('row');
     }
 }
+
+function draw(columnDiv) {
+    columnDiv.style.backgroundColor = 'red';
+}
+
+
 
 
 

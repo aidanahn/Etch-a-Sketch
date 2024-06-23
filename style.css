@@ -24,14 +24,12 @@ body {
     flex-direction: column;
 }
 
-.foo {
+.row {
     height: 100%;
     min-height: 0;
-    border: 1px solid lightcoral;
     display: flex;
 }
 
-.boo {
-    border: 1px solid lightblue;
+.column {
     width: 100%;
 }
